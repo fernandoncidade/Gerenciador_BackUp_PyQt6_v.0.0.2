@@ -1,0 +1,2 @@
+# Gerenciador_BackUp_PyQt6_v.0.0.2
+ # Gerenciador de Backup  Este projeto é uma aplicação de gerenciamento de backup desenvolvida em Python usando PyQt6. A aplicação permite aos usuários selecionar diferentes métodos de compressão para arquivar pastas e arquivos. A interface gráfica é projetada para ser intuitiva e fácil de usar, oferecendo suporte para vários formatos de compressão e funcionalidades adicionais. São suportados 12 métodos de compressão e de descompressão.
