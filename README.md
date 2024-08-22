@@ -163,14 +163,13 @@ INFORMAÇÕES EXTRAS A RESPEITO DAS LICENÇAS:
       or as a part of other software is permitted, provided that it is clearly
       stated in the documentation and source comments that the code may
       not be used to develop a RAR (WinRAR) compatible archiver.
-
-
-  - Igor Pavlov
+    
+    Igor Pavlov
     ----
 
 
-	Política de Licença Bandizip
-  	-------------------------
+  Política de Licença Bandizip
+  -------------------------
 
 	Ao comprar o Bandizip, você garante o uso do produto de acordo com a seguinte política de licença.
 
@@ -183,4 +182,5 @@ INFORMAÇÕES EXTRAS A RESPEITO DAS LICENÇAS:
 		A licença do Bandizip pode ser usada em qualquer lugar, incluindo residências e empresas, para fins comerciais e não comerciais.
 
 		Essa elegibilidade vale igualmente para a Standard Edition, que não exige a compra de uma licença.
+    ----
         
