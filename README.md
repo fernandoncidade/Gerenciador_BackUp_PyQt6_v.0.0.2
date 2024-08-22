@@ -165,8 +165,8 @@ INFORMAÇÕES EXTRAS A RESPEITO DAS LICENÇAS:
       not be used to develop a RAR (WinRAR) compatible archiver.
 
 
-  --
-  Igor Pavlov
+  - Igor Pavlov
+    ----
 
 
 	Política de Licença Bandizip
