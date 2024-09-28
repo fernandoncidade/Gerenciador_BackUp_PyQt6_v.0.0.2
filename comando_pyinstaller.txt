@@ -1,17 +1,28 @@
 Este código Python tem como finalidade, gerenciar o backup de arquivos e documentos para multiplos diretórios de destino. O backup é efetuado por meio de empacotamento sem compressão em três formatos de extensões como saída (ZIP, 7Z e TAR), tendo como motor o aplicativo 7-Zip, em específico o aplicativo 7zg.exe. É possível escolher um tema de cor para a interface gráfica dentre dez temas disponíveis.
 
 
+
+Comando para instalar as bibliotecas e suas dependências (Apenas as instaladas por você):
+pip-chill > requirements.txt
+
+ou (incluindo as dependências instaladas por terceiros):
+pip freeze > requirements.txt
+
+
+
 Execute o seguinte comando para transformar o código em um programa executável, importando as dependências necessárias:
+
+O comando abaixo funciona, mas não carrega as dependências necessárias para o código em questão.
+pyinstaller --onefile -w rascunho.py
+
 
 
 SEM ÍCONE:
-
 pyinstaller --onefile -w --hidden-import babel.numbers rascunho.py
 
 
 
 COM ÍCONE:
-
 pyinstaller --onefile -w --hidden-import babel.numbers --icon=C:\Users\ferna\Project_Development\Projects_Python\Manager-BackUp_Multi-Thread-Grid_PyQt6-WinRAR-7Zip\Manager-BackUp.ico rascunho.py
 
 
@@ -20,81 +31,11 @@ COM ÍCONE + COM EXECUTÁVEIS EXTERNOS NA RAIZ + ÍCONES DOS BOTÕES + ÍCONE T�
 
 COM ARQUIVOS DE IDIOMA PARA WINRAR E 7ZIP (Sub-Pasta Raiz)
 
-pyinstaller --onefile -w --hidden-import "babel.numbers" --icon="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico" --add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\*;icones" --add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\Config_Method\config.json;Config_Method" --add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\__pycache__\*;__pycache__" --add-binary="C:\Program Files\7-Zip\Lang\pt-br.txt;7-Zip\Lang" --add-binary="C:\Program Files\7-Zip\7-zip.chm;7-Zip" --add-binary="C:\Program Files\7-Zip\descript.ion;7-Zip" --add-binary="C:\Program Files\7-Zip\7z.sfx;7-Zip" --add-binary="C:\Program Files\7-Zip\7zCon.sfx;7-Zip" --add-binary="C:\Program Files\7-Zip\History.txt;7-Zip" --add-binary="C:\Program Files\7-Zip\License.txt;7-Zip" --add-binary="C:\Program Files\7-Zip\readme.txt;7-Zip" --add-binary="C:\Program Files\7-Zip\7z.dll;7-Zip"  --add-binary="C:\Program Files\7-Zip\7-zip.dll;7-Zip" --add-binary="C:\Program Files\7-Zip\7-zip32.dll;7-Zip" --add-binary="C:\Program Files\7-Zip\7z.exe;7-Zip" --add-binary="C:\Program Files\7-Zip\7zFM.exe;7-Zip" --add-binary="C:\Program Files\7-Zip\7zG.exe;7-Zip" --add-binary="C:\Program Files\WinRAR\WinRAR.exe;WinRAR" --add-binary="C:\Program Files\WinRAR\winrar.lng;WinRAR" --add-binary="C:\Program Files\WinRAR\Zip.SFX;WinRAR" --add-binary="C:\Program Files\WinRAR\Zip32.SFX;WinRAR" --add-binary="C:\Program Files\WinRAR\7zxa.dll;WinRAR" --add-binary="C:\Program Files\WinRAR\Default.SFX;WinRAR" --add-binary="C:\Program Files\WinRAR\Default32.SFX;WinRAR" --add-binary="C:\Program Files\WinRAR\Descript.ion;WinRAR" --add-binary="C:\Program Files\WinRAR\Rar.exe;WinRAR" --add-binary="C:\Program Files\WinRAR\rar.lng;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExt.dll;WinRAR" --add-binary="C:\Program Files\WinRAR\rarext.lng;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExt32.dll;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExtInstaller.exe;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExtPackage.msix;WinRAR" --add-binary="C:\Program Files\WinRAR\RarFiles.lst;WinRAR" --add-binary="C:\Program Files\WinRAR\rarnew.dat;WinRAR" --add-binary="C:\Program Files\WinRAR\rarreg.key;WinRAR" --add-binary="C:\Program Files\WinRAR\Resources.pri;WinRAR" --add-binary="C:\Program Files\WinRAR\sfx.lng;WinRAR" --add-binary="C:\Program Files\WinRAR\UnRAR.exe;WinRAR" --add-binary="C:\Program Files\WinRAR\WinCon.SFX;WinRAR" --add-binary="C:\Program Files\WinRAR\WinCon32.SFX;WinRAR" --add-binary="C:\Program Files\WinRAR\Order.htm;WinRAR" --add-binary="C:\Program Files\WinRAR\License.txt;WinRAR" --add-binary="C:\Program Files\WinRAR\Rar.txt;WinRAR" --add-binary="C:\Program Files\WinRAR\ReadMe.txt;WinRAR" --add-binary="C:\Program Files\WinRAR\UnrarSrc.txt;WinRAR" --add-binary="C:\Program Files\WinRAR\WhatsNew.txt;WinRAR" --add-binary="C:\Program Files\WinRAR\Uninstall.exe;WinRAR" --add-binary="C:\Program Files\WinRAR\WinRAR.chm;WinRAR" --add-binary="C:\Program Files\WinRAR\uninstall.lng;WinRAR" --add-binary="C:\Program Files\WinRAR\Uninstall.lst;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExtInstaller.exe.manifest;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-32.png;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-48.png;WinRAR" --add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-64.png;WinRAR" --add-binary="C:\Program Files\Bandizip\VersionNo.ini;Bandizip" --add-binary="C:\Program Files\Bandizip\data\*;Bandizip\data" --add-binary="C:\Program Files\Bandizip\icons\default\*;Bandizip\icons\default" --add-binary="C:\Program Files\Bandizip\langs\*;Bandizip\langs" --add-binary="C:\Program Files\Bandizip\shellicons\*;Bandizip\shellicons" --add-binary="C:\Program Files\Bandizip\ark.x64.dll;Bandizip" --add-binary="C:\Program Files\Bandizip\ark.x64.lgpl.dll;Bandizip" --add-binary="C:\Program Files\Bandizip\ark.x86.dll;Bandizip" --add-binary="C:\Program Files\Bandizip\ark.x86.lgpl.dll;Bandizip" --add-binary="C:\Program Files\Bandizip\Arkview.x64.exe;Bandizip" --add-binary="C:\Program Files\Bandizip\Bandizip.exe;Bandizip" --add-binary="C:\Program Files\Bandizip\bdzsfx.x86.sfx;Bandizip" --add-binary="C:\Program Files\Bandizip\bdzshl.x64.dll;Bandizip" --add-binary="C:\Program Files\Bandizip\bdzshl.x86.dll;Bandizip" --add-binary="C:\Program Files\Bandizip\bz.exe;Bandizip" --add-binary="C:\Program Files\Bandizip\config.ini;Bandizip" --add-binary="C:\Program Files\Bandizip\Uninstall.exe;Bandizip" --add-binary="C:\Program Files\Bandizip\Updater.exe;Bandizip" "_1_GUI_backup.py"
+pyinstaller --onefile -w --hidden-import "babel.numbers" --icon="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico" --add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\*;icones" --add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\Config_Method\config.json;Config_Method" --add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\__pycache__\*;__pycache__" --add-binary="C:\Program Files\7-Zip\*;7-Zip" --add-binary="C:\Program Files\WinRAR\*;WinRAR" --add-binary="C:\Program Files\Bandizip\*;Bandizip" "_1_GUI_backup.py"
 
 
 
 ***EXEMPLO RASCUNHO (Sub-Pasta Raiz)***
-
-pyinstaller --onefile -w --hidden-import "babel.numbers" 
---icon="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\winrar3.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\winzip4.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\sevenzip4.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\tar1.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\extracao4.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\clear_button3.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\clear_button2.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\bz2.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\gzip1.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\wim.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\xz.png;icones" 
---add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\Config_Method\config.json;Config_Method" 
---add-binary="C:\Program Files\7-Zip\Lang\pt-br.txt;7-Zip\Lang" 
---add-binary="C:\Program Files\7-Zip\7-zip.chm;7-Zip" 
---add-binary="C:\Program Files\7-Zip\descript.ion;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7z.sfx;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7zCon.sfx;7-Zip" 
---add-binary="C:\Program Files\7-Zip\History.txt;7-Zip" 
---add-binary="C:\Program Files\7-Zip\License.txt;7-Zip" 
---add-binary="C:\Program Files\7-Zip\readme.txt;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7z.dll;7-Zip"  
---add-binary="C:\Program Files\7-Zip\7-zip.dll;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7-zip32.dll;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7z.exe;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7zFM.exe;7-Zip" 
---add-binary="C:\Program Files\7-Zip\7zG.exe;7-Zip" 
---add-binary="C:\Program Files\WinRAR\WinRAR.exe;WinRAR" 
---add-binary="C:\Program Files\WinRAR\winrar.lng;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Zip.SFX;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Zip32.SFX;WinRAR" 
---add-binary="C:\Program Files\WinRAR\7zxa.dll;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Default.SFX;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Default32.SFX;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Descript.ion;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Rar.exe;WinRAR" 
---add-binary="C:\Program Files\WinRAR\rar.lng;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExt.dll;WinRAR" 
---add-binary="C:\Program Files\WinRAR\rarext.lng;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExt32.dll;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExtInstaller.exe;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExtPackage.msix;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarFiles.lst;WinRAR" 
---add-binary="C:\Program Files\WinRAR\rarnew.dat;WinRAR" 
---add-binary="C:\Program Files\WinRAR\rarreg.key;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Resources.pri;WinRAR" 
---add-binary="C:\Program Files\WinRAR\sfx.lng;WinRAR" 
---add-binary="C:\Program Files\WinRAR\UnRAR.exe;WinRAR" 
---add-binary="C:\Program Files\WinRAR\WinCon.SFX;WinRAR" 
---add-binary="C:\Program Files\WinRAR\WinCon32.SFX;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Order.htm;WinRAR" 
---add-binary="C:\Program Files\WinRAR\License.txt;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Rar.txt;WinRAR" 
---add-binary="C:\Program Files\WinRAR\ReadMe.txt;WinRAR" 
---add-binary="C:\Program Files\WinRAR\UnrarSrc.txt;WinRAR" 
---add-binary="C:\Program Files\WinRAR\WhatsNew.txt;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Uninstall.exe;WinRAR" 
---add-binary="C:\Program Files\WinRAR\WinRAR.chm;WinRAR" 
---add-binary="C:\Program Files\WinRAR\uninstall.lng;WinRAR" 
---add-binary="C:\Program Files\WinRAR\Uninstall.lst;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExtInstaller.exe.manifest;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-32.png;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-48.png;WinRAR" 
---add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-64.png;WinRAR" 
-rascunho1.py
-
-
 
 pyinstaller --onefile -w --hidden-import "babel.numbers" 
 --icon="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico" 
@@ -172,6 +113,26 @@ pyinstaller --onefile -w --hidden-import "babel.numbers"
 --add-binary="C:\Program Files\Bandizip\Updater.exe;Bandizip" 
 "_1_GUI_backup.py"
 
+pyinstaller --onefile -w --hidden-import "babel.numbers" 
+--icon="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico" 
+--add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\*;icones" 
+--add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\Config_Method\config.json;Config_Method" 
+--add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\__pycache__\*;__pycache__" 
+--add-binary="C:\Program Files\7-Zip\*;7-Zip" 
+--add-binary="C:\Program Files\WinRAR\*;WinRAR" 
+--add-binary="C:\Program Files\Bandizip\*;Bandizip" 
+"_1_GUI_backup.py"
+
+pyinstaller --onefile -w --hidden-import "babel.numbers" 
+--icon="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\Manager-BackUp.ico" 
+--add-binary="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\icones\*;icones" 
+--add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\Config_Method\config.json;Config_Method" 
+--add-data="C:\Users\ferna\PROJETOS\Projetos_Python\Manager-BackUp\Manager-BackUp_PyQt6\Gerenciador_BackUp_PyQt6_v.0.0.2\__pycache__\*;__pycache__" 
+--add-binary="C:\Program Files\7-Zip\*;7-Zip" 
+--add-binary="C:\Program Files\WinRAR\*;WinRAR" 
+--add-binary="C:\Program Files\Bandizip\*;Bandizip" 
+"_1_GUI_backup.py"
+
 
 
 ***EXEMPLO RASCUNHO (Pasta Raiz)***
@@ -242,20 +203,7 @@ pyinstaller --onefile -w --hidden-import "babel.numbers"
 --add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-32.png;." 
 --add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-48.png;." 
 --add-binary="C:\Program Files\WinRAR\RarExtLogo.altform-unplated_targetsize-64.png;." 
-rascunho1.py
-
-
-
-O comando abaixo funciona, mas não carrega as dependências necessárias para o código em questão.
-pyinstaller --onefile -w rascunho.py
-
-
-
-Comando para instalar as bibliotecas e suas dependências (Apenas as instaladas por você):
-pip-chill > requirements.txt
-
-ou (incluindo as dependências instaladas por terceiros):
-pip freeze > requirements.txt
+_1_GUI_backup.py
 
 
 
